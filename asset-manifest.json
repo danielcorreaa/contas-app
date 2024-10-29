@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/contas-app/static/css/main.35a1362d.css",
+    "main.js": "/contas-app/static/js/main.a89482df.js",
+    "static/js/453.6223049f.chunk.js": "/contas-app/static/js/453.6223049f.chunk.js",
+    "index.html": "/contas-app/index.html",
+    "main.35a1362d.css.map": "/contas-app/static/css/main.35a1362d.css.map",
+    "main.a89482df.js.map": "/contas-app/static/js/main.a89482df.js.map",
+    "453.6223049f.chunk.js.map": "/contas-app/static/js/453.6223049f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.35a1362d.css",
+    "static/js/main.a89482df.js"
+  ]
+}
