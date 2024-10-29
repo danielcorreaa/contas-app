@@ -1,0 +1,24 @@
+.sidenav {
+   height: 30vw; 
+   width: 80%;
+   text-align: left;
+   margin-left: 10%;
+   margin-top: 10%;
+}
+
+.sidenav ol li, .text-link{
+   list-style: none;
+   padding: 10px;
+   color: #282c34;;
+   text-decoration: none;
+}
+
+.sidenav ol li:hover, .text-link:hover {
+    background-color: #282c34;
+    color: #fff;
+}
+
+   
+  
+
+  
