@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/contas-app/static/css/main.e8bd16ee.css",
-    "main.js": "/contas-app/static/js/main.1625d8f5.js",
-    "static/js/453.6223049f.chunk.js": "/contas-app/static/js/453.6223049f.chunk.js",
-    "index.html": "/contas-app/index.html",
-    "main.e8bd16ee.css.map": "/contas-app/static/css/main.e8bd16ee.css.map",
-    "main.1625d8f5.js.map": "/contas-app/static/js/main.1625d8f5.js.map",
-    "453.6223049f.chunk.js.map": "/contas-app/static/js/453.6223049f.chunk.js.map"
+    "main.css": "/static/css/main.e8bd16ee.css",
+    "main.js": "/static/js/main.a2f31662.js",
+    "static/js/453.6223049f.chunk.js": "/static/js/453.6223049f.chunk.js",
+    "index.html": "/index.html",
+    "main.e8bd16ee.css.map": "/static/css/main.e8bd16ee.css.map",
+    "main.a2f31662.js.map": "/static/js/main.a2f31662.js.map",
+    "453.6223049f.chunk.js.map": "/static/js/453.6223049f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e8bd16ee.css",
-    "static/js/main.1625d8f5.js"
+    "static/js/main.a2f31662.js"
   ]
 }
