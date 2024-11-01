@@ -3,7 +3,7 @@ import Botao from "../botao"
 import Input from "../input"
 import "./cadastroConta.css"
 import { useNavigate } from "react-router-dom"
-import axios from "axios"
+import CadastrarConta from "../../integracao/cadastrarConta"
 
 const CadastroConta = () => {
 
@@ -16,16 +16,9 @@ const CadastroConta = () => {
     }
 
     const cadastrar = (event) => {
-        event.preventDefault()     
-        axios.post("http://localhost:8082/account", [ conta ])
-             .then((resp) =>{                             
-                if(resp.data.code === 200){ 
-                    console.log(resp.data)
-                }                               
-             })
-             .catch((error) => {
-                console.log(error)
-             } ) 
+        event.preventDefault() 
+        CadastrarConta(conta)   
+       
         navigate("/listaContasAtivas")
     }
     return <>

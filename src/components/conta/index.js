@@ -6,6 +6,7 @@ import TBODYContasAPAgar from '../table/body/tbodyContasAPagar';
 
 
 const Conta = ({dados}) => {
+    var url = process.env.REACT_APP_LINK_API
     const [valor, setValor] = useState()
     const [response, setResponse] = useState()
 
@@ -15,8 +16,9 @@ const Conta = ({dados}) => {
             'idAccount': id,
             'valor': valor, 
             'check': true
-       }   
-       axios.put("http://localhost:8082/monthly", object)
+       } 
+         
+       axios.put(url+"/monthly", object)
              .then(function(resp) {
                 console.log(resp.data.body);
                 setResponse(resp.data.body);                              
@@ -27,7 +29,7 @@ const Conta = ({dados}) => {
     }
 
     const monthly = () => {
-        if(response == undefined){
+        if(response === undefined){
             return dados
         } else {
             return response

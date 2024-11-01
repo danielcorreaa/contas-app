@@ -19,7 +19,7 @@ function App() {
 
   const doLogin = (event) => {
     event.preventDefault()
-    if(login == 'admin' && password =='1234') {
+    if(login === 'admin' && password === '1234') {
       setMakeLogin(true)
     } 
     console.log(makeLogin)

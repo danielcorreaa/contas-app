@@ -4,10 +4,10 @@ import './monthly.css'
 const Monthly = ({props}) => {
     console.log(props)
     const isValid = (prop) =>{
-        if(prop == undefined){
+        if(prop === undefined){
             return true
         }
-        if(prop == false){
+        if(prop === false){
             return true
         }
     }

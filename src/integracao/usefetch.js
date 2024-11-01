@@ -4,7 +4,7 @@ export const useFetch = (url) => {
     const [dados, setDados] = useState([]) 
     useEffect(() => { 
       console.log(url)
-      fetch('http://localhost:8082'.concat(url), 
+      fetch(process.env.REACT_APP_LINK_API.concat(url), 
          {
             method: 'GET',
             headers: { 'Content-Type': 'application/json' } 

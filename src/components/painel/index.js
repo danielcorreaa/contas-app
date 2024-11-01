@@ -25,10 +25,10 @@ const Panel = () => {
     console.log('dados'+dados)
 
     const mustShow = () => {
-        if(dados == undefined && contas == undefined){
+        if(dados === undefined && contas === undefined){
             return true
         }
-        if(dados == undefined && contas != undefined){
+        if(dados === undefined && contas !== undefined){
             return false
         }
     }
