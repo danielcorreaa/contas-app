@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/contas-app/static/css/main.35a1362d.css",
-    "main.js": "/contas-app/static/js/main.a89482df.js",
+    "main.css": "/contas-app/static/css/main.e8bd16ee.css",
+    "main.js": "/contas-app/static/js/main.1625d8f5.js",
     "static/js/453.6223049f.chunk.js": "/contas-app/static/js/453.6223049f.chunk.js",
     "index.html": "/contas-app/index.html",
-    "main.35a1362d.css.map": "/contas-app/static/css/main.35a1362d.css.map",
-    "main.a89482df.js.map": "/contas-app/static/js/main.a89482df.js.map",
+    "main.e8bd16ee.css.map": "/contas-app/static/css/main.e8bd16ee.css.map",
+    "main.1625d8f5.js.map": "/contas-app/static/js/main.1625d8f5.js.map",
     "453.6223049f.chunk.js.map": "/contas-app/static/js/453.6223049f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.35a1362d.css",
-    "static/js/main.a89482df.js"
+    "static/css/main.e8bd16ee.css",
+    "static/js/main.1625d8f5.js"
   ]
 }
