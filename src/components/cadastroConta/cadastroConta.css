@@ -1,5 +1,46 @@
 .casdastroConta{
+    width: 25%;
+    margin-left: 37%;
+    margin-top: 5%;
+    padding: 10px;
+    color: #000000;
+    border: 2px solid black;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    border-radius: 3px;
+}
+
+.listaContas ol {
+   list-style: none;
+   text-align: left;
+   padding: 5px;
+   border-bottom: 1px solid #000000;
+}
+
+.botoesAgrupados{
     width: 100%;
-    padding: 1px;
-    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+.inputPlus{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width: 420px) {
+    .casdastroConta{
+        width: 75%;
+        margin-left: 10%;
+        margin-top: 5%;
+        padding: 10px;        
+        border: 2px solid black;
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        border-radius: 3px;
+    }
+    .listaContas ol {
+        list-style: none;
+        text-align: left;
+        padding: 15px;
+        border-bottom: 1px solid #000000;
+     }
 }

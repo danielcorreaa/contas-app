@@ -1,5 +1,5 @@
 .botao {
-    background-color: rgb(243, 254, 87); ;
+    background-color: #FDC00F;
     border-radius: 10px;
     font-weight: 700;
     font-size: 18px;
@@ -15,7 +15,7 @@
 }
 
 button {
-    background-color: rgb(243, 254, 87); ;
+    background-color: #FDC00F ;
     border-radius: 10px;
     font-weight: 700;
     font-size: 18px;

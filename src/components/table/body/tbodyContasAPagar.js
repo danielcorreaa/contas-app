@@ -1,12 +1,16 @@
+import './tbody.css'
+
 import { GiConfirmed } from "react-icons/gi";
-import Botao from "../../botao"
-import Input from "../../input"
+import Botao from "../../Botao"
+import Input from "../../Input"
 import { FaCheck } from "react-icons/fa"
 
-const TBODYContasAPAgar = ({dado, valueInput, pagar}) => { 
+
+const TBODYContasAPAgar = ({dado, valueInput, pagar}) => {
+   
     return <>
     <tbody>
-        <tr>
+        <tr className='coluna'>
            <td> {dado.name}</td>    
            <td>                                 
                 <Input type="number" valor={dado.valor} digitado={event => valueInput(event, 'name')}

@@ -1,11 +1,11 @@
 import './Input.css'
 
-const Input = ({value, digitado, obrigatorio, placeholder, type}) => {
+const Input = ({value, digitado, obrigatorio, placeholder}) => {
 
     return (
         <div className="campo-texto">            
-            <input type={type} value={value} onChange={digitado} 
-                required={obrigatorio}  placeholder={placeholder}/>
+            <input value={value} onChange={digitado} 
+                required="true"  placeholder={placeholder}/>
         </div>
     )
 }

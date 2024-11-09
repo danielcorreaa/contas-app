@@ -1,7 +1,8 @@
 .conta {
-    width: 100%;
+    width: 90%;
     padding: 1px;
-    color: #fff;
+    color: #000000;
+    margin-left: 5%; 
 }
 
 table, tr, th {
@@ -9,7 +10,7 @@ table, tr, th {
     border-bottom: 1px solid #fff;
     font-weight: bold;
     color: #fff;
-    background-color: #282c34;
+    background-color: #61dafb;;
     padding: 15px;
 }
 
@@ -19,16 +20,37 @@ table, tr, td {
     font-weight: bold;
     color: #000000;
     background-color: #fff;
+    border: 1px solid rgb(153, 153, 153);;
 }
+tr:nth-child(even){background-color: #664141;}
 
 table > tfoot > tr > td {
     border-bottom: 1px solid #fff;
     font-weight: bold;
     color: #fff;
-    background-color: #282c34;
+    background-color: #61dafb;;
     padding: 15px;
 }
 
 table {
-    width: 100%;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.conta-mobile{
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+
+    .conta{
+        display: none;
+    }
+    
+
+    .conta-mobile{
+        display: block;
+    }
+    
+
 }

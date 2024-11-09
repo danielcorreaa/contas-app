@@ -1,9 +1,12 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import ConsultaConta from '../../integracao/consultaContasAPagar';
-import Botao from '../botao';
-import Conta from '../conta'
+import Botao from '../Botao';
 import './painel.css'
 import axios from 'axios';
+import { ContasContext } from '../../context/carrinhoProvider';
+import Loader from '../Loader';
+
+import MonthlyControl from '../MonthlyControl';
 
 const monthNames = ["January", "February", "March", "April", "May", "June",
             "July", "August", "September", "October", "November", "December"
@@ -18,11 +21,12 @@ const getMonth = () =>{
     return monthNames[d.getMonth()]
 }
 
-const Panel = () => {  
+const Panel = () => {      
+    const {removeLoader} = useContext(ContasContext) 
+    var url = process.env.REACT_APP_LINK_API
     const [dados, setDados] = useState() 
+
     const contas = ConsultaConta("/monthly/", getId());
-    console.log(contas)
-    console.log('dados'+dados)
 
     const mustShow = () => {
         if(dados === undefined && contas === undefined){
@@ -34,7 +38,7 @@ const Panel = () => {
     }
 
     const execute = () =>{
-        axios.post("http://localhost:8082/monthly", {})           
+        axios.post(url+"/monthly", {})           
             .then(function (response) {
                 console.log(response);
                 setDados(response.data.body);                              
@@ -44,20 +48,24 @@ const Panel = () => {
             } )
     }
 
-    return  <>   
-    {(dados || contas) &&
-        <div className='content-panel'>            
-            <div className='panel'> 
-                <Conta  dados={dados == null ? contas : dados}/>
+    return  <> 
+    {removeLoader && <Loader/>}  
+    {!removeLoader && 
+
+        (dados || contas) &&
+            <div className='content-panel'> 
+                <h3>Contas do Mês de </h3>
+                <MonthlyControl  dados={dados == null ? contas : dados}/>             
             </div>  
-         </div>  
-    }    
-    { mustShow() && <div className='content-panel'> 
-        <h2>Nenhuma Lista de contas cadastrada para o mês de {getMonth()}</h2>
-        
-        <Botao execute={() => execute()}>Gerar lista de contas</Botao>
-    </div>}
-     </>
+        }    
+        { mustShow() && <div className='content-panel'> 
+            <h2>Nenhuma Lista de contas cadastrada para o mês de {getMonth()}</h2>
+            
+            <Botao execute={() => execute()}>Gerar lista de contas</Botao>
+        </div>
+    
+    }
+    </>
 }
 
 export default Panel

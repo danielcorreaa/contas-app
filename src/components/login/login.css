@@ -1,15 +1,23 @@
+.fundo-login {
+    height: 100%;
+    width: 100%;
+    background-color: #EEF5F7; 
+    position: absolute;
+}
 .cardLogin{
     padding: 20px;
-    width: 30%;
-    margin-left: 35%;
+    width: 20%;
+    margin-left: 40%;
     margin-top: 10%;
     min-height: 300px;
-    background-color: #282c34;
+    background-color: #ffffff;
+    border: 3px solid #000000;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    border-radius: 15px;
 }
 
 .cardLogin h2 {
-    color: #fff;
+    color: #000000;
 }
 
 .container {
@@ -25,5 +33,35 @@ input[type=text], input[type=password] {
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
+
+.cadastrar-usuario{
+    text-decoration: none;
+    padding: 5px;
+}
   
   /* Set a style for all buttons */
+
+@media only screen and (max-width: 420px) {
+
+    .cardLogin{        
+        width: 70%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 10%;
+        min-height: 400px;
+        background-color: #ffffff;
+        border: 3px solid #000000;
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        border-radius: 15px;
+    }
+
+    input[type=text], input[type=password] {
+        width: 50%;
+        padding: 6px 10px;
+        margin: 4px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+      
+}

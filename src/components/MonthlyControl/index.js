@@ -1,14 +1,15 @@
 import { useState } from 'react';
 import './conta.css'
-import axios from 'axios';
 import TBODYContasAPAgar from '../table/body/tbodyContasAPagar';
+import http from '../../integracao/http';
 
 
 
-const Conta = ({dados}) => {
-    var url = process.env.REACT_APP_LINK_API
+const MonthlyControl = ({dados}) => {
     const [valor, setValor] = useState()
+
     const [response, setResponse] = useState()
+    const [ setError] = useState()
 
     const pagar = (id) => {
        const object = {
@@ -16,14 +17,13 @@ const Conta = ({dados}) => {
             'idAccount': id,
             'valor': valor, 
             'check': true
-       } 
-         
-       axios.put(url+"/monthly", object)
+       }      
+       http.put("/monthly", object)
              .then(function(resp) {
-                console.log(resp.data.body);
-                setResponse(resp.data.body);                              
+                setResponse(resp.data.body); 
              })
              .catch((error) => {
+                setError(error)
                 console.log(error)
              } )               
     }
@@ -42,8 +42,7 @@ const Conta = ({dados}) => {
         setValor(event.target.value)
     } 
     return  <>         
-         <div className='conta'> 
-            <h3>Contas do Mês de </h3>
+         <div className='conta'>             
             <table>
                 <thead>
                     <tr>
@@ -67,8 +66,34 @@ const Conta = ({dados}) => {
                     </tr>
                 </tfoot>                
              </table>
+         </div>   
+
+         <div className='conta-mobile'>             
+            <table>
+                <thead>
+                    <tr>
+                        <th> Conta</th>                                     
+                        <th> a pagar </th>
+                        <th> Pag. Realizado</th>
+                        <th> Pago</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                {monthly().account && monthly().account.map( dado => 
+                      <TBODYContasAPAgar key={dado.id} dado={ dado} valueInput={valueInput} pagar={pagar}/>                                  
+                )} 
+                <tfoot>
+                    <tr>
+                        <td>Total</td>
+                        <td></td>
+                        <td></td>                   
+                        <td>R$ {monthly().total}</td>
+                        <td></td>
+                    </tr>
+                </tfoot>                
+             </table>
          </div>    
      </>
 }
 
-export default Conta
+export default MonthlyControl
